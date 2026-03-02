@@ -73,16 +73,6 @@ SN2026aip,40.641419677778,-27.350850566667,61050.0
 *\*Required only if `--file` is not used.*
 
 
-
-### Interactive Workflow
-
-1. **Login:** The script will securely ask for your ATLAS username and password.
-2. **Download:** It will queue the task, wait for the ATLAS server to process it, and save the raw data (`<ObjectName>_LC.txt`).
-3. **Process & Plot:** The script will pause and ask:
-   `Do you want to perform daily binning and plot the light curve for SN2025wiu? (y/n):`
-   Type `y` to automatically execute the data cleaning, binning, and plotting routines.
-
-
 ## Output Files
 
 The pipeline will generate three files in the same directory:
