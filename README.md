@@ -30,7 +30,7 @@ You can run this pipeline in two ways: **Single Target Mode** or **Batch Process
 Run the script directly from your terminal by providing the object's details.
 
 ```bash
-python atlas_fp_request.py --name SN2025wiu --ra "01:55:58.487" --dec=-00:26:43.28 --mjd_min 60915.0
+python atlas_fp_request.py --name SN2024ggi --ra 11:18:22.087 --dec=-32:50:15.27 --mjd_min 60411.0 --mjd_max 60511.0
 ```
 
 > [!WARNING]
