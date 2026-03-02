@@ -1,4 +1,4 @@
-# ATLAS Forced Photometry Pipeline
+# ATLAS Forced Photometry request and binning
 
 A fully automated Python pipeline to download, clean, bin, and visualize forced photometry light curves from the [ATLAS (Asteroid Terrestrial-impact Last Alert System)](https://fallingstar-data.com/forcedphot/) server.
 
@@ -24,27 +24,46 @@ ATLAS_PASSWORD=your_password_here
 
 ## Usage
 
-Run the script from your terminal using command-line arguments. 
+You can run this pipeline in two ways: **Single Target Mode** or **Batch Processing Mode**.
 
-| Argument | Status | Description | Example |
-| :--- | :--- | :--- | :--- |
-| `--name` | **Required** | The name of the astronomical object. Used for output filenames and plot titles. | e.g. `SN2024ggi` |
-| `--ra` | **Required** | Right Ascension. Accepts both Sexagesimal (HMS) and Decimal Degrees formats. | e.g.`"11:18:22.087"` or `169.592030529` |
-| `--dec` | **Required** | Declination. Accepts both DMS and Decimal Degrees formats. *(See important note below for negative values).* | `-32:50:15.27` or `-32.8375756395` |
-| `--mjd_min` | **Required** | The minimum Modified Julian Date (MJD) to start fetching data. | `60411.0` |
-| `--mjd_max` | Optional | The maximum MJD to fetch data up to. If left blank, it fetches the latest available data. | `61000.0` |
+### 1. Single Target Mode
+Run the script directly from your terminal by providing the object's details.
 
 ```bash
-python atlas_fp_request.py --name <ObjectName> --ra <RA> --dec <DEC> --mjd_min <Start_MJD> [--mjd_max <End_MJD>]
-```
-
-### Example Command
-
-```bash
-python atlas_fp_request.py --name SN2024ggi --ra 11:18:22.087 --dec=-32:50:15.27 --mjd_min 60411.0
+python atlas_fp_request.py --name SN2025wiu --ra "01:55:58.487" --dec=-00:26:43.28 --mjd_min 60915.0
 ```
 
 > **⚠️ IMPORTANT NOTE FOR NEGATIVE DECLINATION:** > If your target has a negative Declination (e.g., `-00:26:43.28`), you **must** use an equals sign (`=`) between `--dec` and the value. Otherwise, the command-line parser will mistake the minus sign for a new argument flag.
+
+### 2. Batch Processing Mode
+You can process multiple targets automatically by providing a CSV file.
+
+```bash
+python atlas_fp_request.py --file targets.csv
+```
+
+**Format of `targets.csv`:**
+Create a CSV file with the following headers. The `mjd_max` column is optional and can be left blank to fetch data up to the current date.
+
+```csv
+name,ra,dec,mjd_min,mjd_max
+SN2025wiu,01:55:58.487,-00:26:43.28,60915.0,
+SN2024ggi,11:18:22.087,-32:50:15.27,60400.0,60500.0
+```
+
+### Command-Line Arguments
+
+| Argument | Status | Description | Example |
+| :--- | :--- | :--- | :--- |
+| `--file` | Optional | Path to a CSV/TXT file containing multiple targets. If provided, overrides all arguments below. | `targets.csv` |
+| `--name` | Required* | The name of the astronomical object. | `SN2025wiu` |
+| `--ra` | Required* | Right Ascension (HMS or Decimal Degrees). | `"01:55:58.487"` |
+| `--dec` | Required* | Declination (DMS or Decimal Degrees). | `-00:26:43.28` |
+| `--mjd_min` | Required* | The minimum MJD to start fetching data. | `60915.0` |
+| `--mjd_max` | Optional | The maximum MJD. Leave blank for latest data. | `61073.0` |
+
+*\*Required only if `--file` is not used.*
+
 
 
 ### Interactive Workflow
