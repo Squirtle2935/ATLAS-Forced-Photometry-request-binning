@@ -2,13 +2,22 @@
 
 A fully automated Python pipeline to download, clean, bin, and visualize forced photometry light curves from the [ATLAS (Asteroid Terrestrial-impact Last Alert System)](https://fallingstar-data.com/forcedphot/) server.
 
-## Prerequisites
+## Installation
 
-Ensure you have Python 3 installed. You can install all required libraries in one go using the provided `requirements.txt` file:
+First, clone the repository to your local machine and navigate into the project directory:
+
+```bash
+git clone [https://github.com/Squirtle2935/ATLAS-Forced-Photometry-request-binning.git](https://github.com/Squirtle2935/ATLAS-Forced-Photometry-request-binning.git)
+cd ATLAS-Forced-Photometry-request-binning.git
+```
+
+Next, ensure you have Python 3 installed. Install all required libraries in one go using the provided `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+*Note: You must have a registered account on the ATLAS Forced Photometry server.*
 
 *Note: You must have a registered account on the ATLAS Forced Photometry server.*
 
