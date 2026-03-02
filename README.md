@@ -33,7 +33,7 @@ Run the script directly from your terminal by providing the object's details.
 python atlas_fp_request.py --name SN2025wiu --ra "01:55:58.487" --dec=-00:26:43.28 --mjd_min 60915.0
 ```
 
-> **⚠️ IMPORTANT NOTE FOR NEGATIVE DECLINATION:** > If your target has a negative Declination (e.g., `-00:26:43.28`), you **must** use an equals sign (`=`) between `--dec` and the value. Otherwise, the command-line parser will mistake the minus sign for a new argument flag.
+> **IMPORTANT NOTE FOR NEGATIVE DECLINATION:** > If your target has a negative Declination (e.g., `-00:26:43.28`), you **must** use an equals sign (`=`) between `--dec` and the value. Otherwise, the command-line parser will mistake the minus sign for a new argument flag.
 
 ### 2. Batch Processing Mode
 You can process multiple targets automatically by providing a CSV file.
