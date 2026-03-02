@@ -60,8 +60,8 @@ SN2024ggi,11:18:22.087,-32:50:15.27,60400.0,60500.0
 | `--name` | Required* | The name of the astronomical object. | `SN2025wiu` |
 | `--ra` | Required* | Right Ascension (HMS or Decimal Degrees). | `"01:55:58.487"` |
 | `--dec` | Required* | Declination (DMS or Decimal Degrees). | `-00:26:43.28` |
-| `&#8209;&#8209;mjd_min` | Required* | The minimum MJD to start fetching data. | `60915.0` |
-| `&#8209;&#8209;mjd_max` | Optional | The maximum MJD. Leave blank for latest data. | `61073.0` |
+| `‑‑mjd_min` | Required* | The minimum MJD to start fetching data. | `60915.0` |
+| `‑‑mjd_max` | Optional | The maximum MJD. Leave blank for latest data. | `61073.0` |
 
 *\*Required only if `--file` is not used.*
 
