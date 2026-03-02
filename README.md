@@ -33,7 +33,7 @@ Run the script directly from your terminal by providing the object's details.
 python atlas_fp_request.py --name SN2025wiu --ra "01:55:58.487" --dec=-00:26:43.28 --mjd_min 60915.0
 ```
 
-> **IMPORTANT NOTE FOR NEGATIVE DECLINATION:** > If your target has a negative Declination (e.g., `-00:26:43.28`), you **must** use an equals sign (`=`) between `--dec` and the value. Otherwise, the command-line parser will mistake the minus sign for a new argument flag.
+ **IMPORTANT NOTE FOR NEGATIVE DECLINATION:** > If your target has a negative Declination (e.g., `-00:26:43.28`), you **must** use an equals sign (`=`) between `--dec` and the value. Otherwise, the command-line parser will mistake the minus sign for a new argument flag.
 
 ### 2. Batch Processing Mode
 You can process multiple targets automatically by providing a CSV file.
@@ -59,8 +59,8 @@ SN2024ggi,11:18:22.087,-32:50:15.27,60400.0,60500.0
 | `--name` | Required* | The name of the astronomical object. | `SN2025wiu` |
 | `--ra` | Required* | Right Ascension (HMS or Decimal Degrees). | `"01:55:58.487"` |
 | `--dec` | Required* | Declination (DMS or Decimal Degrees). | `-00:26:43.28` |
-| `--mjd_min` | Required* | The minimum MJD to start fetching data. | `60915.0` |
-| `--mjd_max` | Optional | The maximum MJD. Leave blank for latest data. | `61073.0` |
+| <nobr>`--mjd_min`<nobr> | Required* | The minimum MJD to start fetching data. | `60915.0` |
+| <nobr>`--mjd_max`<nobr> | Optional | The maximum MJD. Leave blank for latest data. | `61073.0` |
 
 *\*Required only if `--file` is not used.*
 
