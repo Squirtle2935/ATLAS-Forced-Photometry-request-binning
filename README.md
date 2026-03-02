@@ -7,7 +7,7 @@ A fully automated Python pipeline to download, clean, bin, and visualize forced 
 First, clone the repository to your local machine and navigate into the project directory:
 
 ```bash
-git clone [https://github.com/Squirtle2935/ATLAS-Forced-Photometry-request-binning.git](https://github.com/Squirtle2935/ATLAS-Forced-Photometry-request-binning.git)
+git clone https://github.com/Squirtle2935/ATLAS-Forced-Photometry-request-binning.git
 cd ATLAS-Forced-Photometry-request-binning.git
 ```
 
@@ -16,8 +16,6 @@ Next, ensure you have Python 3 installed. Install all required libraries in one 
 ```bash
 pip install -r requirements.txt
 ```
-
-*Note: You must have a registered account on the ATLAS Forced Photometry server.*
 
 *Note: You must have a registered account on the ATLAS Forced Photometry server.*
 
