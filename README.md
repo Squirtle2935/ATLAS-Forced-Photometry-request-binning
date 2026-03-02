@@ -55,8 +55,8 @@ Create a CSV file with the following headers. The `mjd_max` column is optional a
 
 ```csv
 name,ra,dec,mjd_min,mjd_max
-SN2025wiu,01:55:58.487,-00:26:43.28,60915.0,
-SN2024ggi,11:18:22.087,-32:50:15.27,60400.0,60500.0
+SN2023bg,07:42:17.530,-24:22:45.84,59930.0,60050.0
+SN2026aip,40.641419677778,-27.350850566667,61050.0
 ```
 
 ### Command-Line Arguments
