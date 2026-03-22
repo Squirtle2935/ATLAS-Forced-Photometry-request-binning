@@ -1,0 +1,6 @@
+pandas
+requests
+astropy
+matplotlib
+numpy
+python-dotenv
